@@ -1,0 +1,19 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body{
+  -webkit-font-smoothing: antialiased;
+  font: {
+    size: $font-size-base;
+    family: $font-family;
+    weight: 400;
+  }
+}
