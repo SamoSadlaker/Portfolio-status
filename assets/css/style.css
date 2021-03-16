@@ -94,7 +94,7 @@ main header h1 {
 }
 
 main .content {
-  width: 80%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,5 +180,17 @@ main footer a {
 
 main footer a:hover {
   color: #008bf8;
+}
+
+@media (max-width: 750px) {
+  main {
+    width: 95%;
+  }
+}
+
+@media (max-width: 400px) {
+  main {
+    padding: 1em 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

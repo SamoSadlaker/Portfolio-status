@@ -1,5 +1,6 @@
 <?php
 require_once "./app/controllers/StatusController.php";
+require_once "./app/settings.php";
 $status = new StatusController();
 ?>
 <!DOCTYPE html>
@@ -64,7 +65,7 @@ $status = new StatusController();
       </div>
       <div class="line">
         <h5>Database</h5>
-        <?= $status->getDatabase("localhost", "mmp", "root", "") ? '<span class="operative"><i class="bx bxs-check-circle"></i> Operative</span>' : '<span class="inoperative"><i class="bx bxs-error" ></i> Inoperative</span>' ?>
+        <?= $status->getDatabase($database->host, $database->database, $database->name, $database->password) ? '<span class="operative"><i class="bx bxs-check-circle"></i> Operative</span>' : '<span class="inoperative"><i class="bx bxs-error" ></i> Inoperative</span>' ?>
       </div>
       <div class="line">
         <h5>Dashboard</h5>
@@ -77,7 +78,7 @@ $status = new StatusController();
     </div>
 
     <footer>
-      <a href="portfolio.samo"><i class='bx bxs-home'></i> Back to home.</a>
+      <a href="https://portfolio.samo"><i class='bx bxs-home'></i> Back to home.</a>
     </footer>
   </main>
   

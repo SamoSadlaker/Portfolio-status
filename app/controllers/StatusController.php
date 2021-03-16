@@ -15,14 +15,13 @@ class StatusController
 
     public function getDatabase($host, $database, $name, $password)
     {
-        error_reporting(0);
-        $link = mysqli_connect($host, $name, $password, $database);
-
-        if (mysqli_connect_errno()) {
-            mysqli_close($link);
+        try {
+            $conn = new PDO("mysql:host=$host;dbname=$database", $name, $password);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return true;
+        } catch (PDOException $e) {
             return false;
         }
-        mysqli_close($link);
-        return true;
+        $conn = null;
     }
 }
