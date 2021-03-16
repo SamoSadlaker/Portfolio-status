@@ -33,6 +33,10 @@ $status = new StatusController();
         <?= $status->getStatus("samosadlaker.eu", "80") ? '<span class="operative"><i class="bx bxs-check-circle"></i> Operative</span>' : '<span class="inoperative"><i class="bx bxs-error" ></i> Inoperative</span>' ?>
       </div>
       <div class="line">
+        <h5>Database</h5>
+        <?= $status->getDatabase("localhost", "mmp", "root", "") ? '<span class="operative"><i class="bx bxs-check-circle"></i> Operative</span>' : '<span class="inoperative"><i class="bx bxs-error" ></i> Inoperative</span>' ?>
+      </div>
+      <div class="line">
         <h5>Dashboard</h5>
         <?= $status->getStatus("dashboard.samosadlaker.eu", "80") ? '<span class="operative"><i class="bx bxs-check-circle"></i> Operative</span>' : '<span class="inoperative"><i class="bx bxs-error" ></i> Inoperative</span>' ?>
       </div>

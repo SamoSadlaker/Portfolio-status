@@ -12,4 +12,17 @@ class StatusController
             @fclose($page);
         }
     }
+
+    public function getDatabase($host, $database, $name, $password)
+    {
+        error_reporting(0);
+        $link = mysqli_connect($host, $name, $password, $database);
+
+        if (mysqli_connect_errno()) {
+            mysqli_close($link);
+            return false;
+        }
+        mysqli_close($link);
+        return true;
+    }
 }
