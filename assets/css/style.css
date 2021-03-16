@@ -46,7 +46,7 @@ a {
 }
 
 main {
-  width: 70%;
+  width: 50%;
   height: 80%;
   padding: 1em 2em;
   background-color: rgba(0, 0, 0, 0.5);
@@ -91,6 +91,85 @@ main header h1 {
   color: #f1f1f1;
   font-size: 2em;
   font-weight: 600;
+}
+
+main .content {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .content .line {
+  padding: 0.4em 0;
+  margin: 0.5em 0;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .content .line h5 {
+  color: #f1f1f1;
+  font-size: 1.3em;
+}
+
+main .content .line span {
+  text-transform: uppercase;
+  width: 9em;
+  height: 2.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.4em 0.5em;
+  border-radius: 0.625em;
+  text-align: center;
+  color: #f1f1f1;
+  font-size: 0.9em;
+}
+
+main .content .line span i {
+  font-size: 1.3em;
+  vertical-align: middle;
+  margin-right: 0.2em;
+}
+
+main .content .line .operative {
+  background-color: #53a653;
+}
+
+main .content .line .inoperative {
+  background-color: #ff4444;
 }
 
 main footer a {

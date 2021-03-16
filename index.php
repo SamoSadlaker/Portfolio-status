@@ -1,3 +1,7 @@
+<?php
+require_once "./app/controllers/StatusController.php";
+$status = new StatusController();
+?>
 <!DOCTYPE html>
 <html lang="sk">
 <head>
@@ -24,7 +28,18 @@
     </header>
     
     <div class="content">
-
+      <div class="line">
+        <h5>Website</h5>
+        <?= $status->getStatus("samosadlaker.eu", "80") ? '<span class="operative"><i class="bx bxs-check-circle"></i> Operative</span>' : '<span class="inoperative"><i class="bx bxs-error" ></i> Inoperative</span>' ?>
+      </div>
+      <div class="line">
+        <h5>Dashboard</h5>
+        <?= $status->getStatus("dashboard.samosadlaker.eu", "80") ? '<span class="operative"><i class="bx bxs-check-circle"></i> Operative</span>' : '<span class="inoperative"><i class="bx bxs-error" ></i> Inoperative</span>' ?>
+      </div>
+      <div class="line">
+        <h5>Webmail</h5>
+        <?= $status->getStatus("mail.samosadlaker.eu", "80") ? '<span class="operative"><i class="bx bxs-check-circle"></i> Operative</span>' : '<span class="inoperative"><i class="bx bxs-error" ></i> Inoperative</span>' ?>
+      </div>
     </div>
 
     <footer>

@@ -1,5 +1,5 @@
 main {
-    width: 70%;
+    width: 50%;
     height: 80%;
     padding: 1em 2em;
     background-color: rgba(0, 0, 0, 0.5);
@@ -25,6 +25,61 @@ main {
             font: {
                 size: 2em;
                 weight: 600;
+            }
+        }
+    }
+
+    .content {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .line {
+            padding: 0.4em 0;
+            margin: 0.5em 0;
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            h5 {
+                color: $color-text-light;
+                font: {
+                    size: 1.3em;
+                }
+            }
+
+            span {
+                text-transform: uppercase;
+                width: 9em;
+                height: 2.2em;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding: 0.4em 0.5em;
+                @include rounded(em(10));
+                text-align: center;
+                color: $color-text-light;
+                font: {
+                    size: 0.9em;
+                }
+
+                i {
+                    font-size: 1.3em;
+                    vertical-align: middle;
+                    margin-right: 0.2em;
+                }
+            }
+
+            .operative {
+                background-color: #53a653;
+            }
+            .inoperative {
+                background-color: #ff4444;
             }
         }
     }
