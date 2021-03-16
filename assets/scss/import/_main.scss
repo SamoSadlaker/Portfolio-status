@@ -17,7 +17,7 @@ main {
         flex-direction: column;
         align-items: center;
         img {
-            width: 5em;
+            width: 4em;
             height: auto;
         }
         h1 {
@@ -25,6 +25,16 @@ main {
             font: {
                 size: 2em;
                 weight: 600;
+            }
+        }
+    }
+
+    footer {
+        a {
+            text-align: center;
+            transition: color $animation-speed;
+            &:hover {
+                color: $color-primary;
             }
         }
     }
